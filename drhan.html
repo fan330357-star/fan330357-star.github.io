@@ -6,8 +6,9 @@
     <title>申请人主要相关论文及专利成果</title>
     <style>
         :root {
-            --primary-color: #003366; /* 西交大校徽蓝 */
-            --accent-color: #e74c3c; /* 突出显示颜色 */
+            --primary-color: #003366; 
+            --accent-latest: #e74c3c; /* 2026最新成果红色 */
+            --accent-new: #f39c12;    /* 2025新成果橙色 */
             --bg-color: #f8f9fa;
         }
 
@@ -37,7 +38,6 @@
             box-shadow: 0 5px 25px rgba(0,0,0,0.05);
         }
 
-        /* 快捷导航栏 */
         .nav-tabs {
             display: flex;
             justify-content: center;
@@ -97,17 +97,27 @@
             margin-right: 10px;
         }
 
-        /* 作者高亮 */
         .highlight-author {
             font-weight: 700;
             text-decoration: underline;
         }
 
-        /* 最新成果标签 */
-        .badge-new {
-            background-color: var(--accent-color);
+        .badge-latest {
+            background-color: var(--accent-latest);
             color: white;
-            font-size: 10px;
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            vertical-align: middle;
+            margin-left: 8px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .badge-new {
+            background-color: var(--accent-new);
+            color: white;
+            font-size: 11px;
             padding: 2px 6px;
             border-radius: 4px;
             vertical-align: middle;
@@ -117,6 +127,15 @@
 
         .patent-tag {
             background-color: #27ae60;
+            color: white;
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+        
+        .software-tag {
+            background-color: #2980b9;
             color: white;
             font-size: 12px;
             padding: 2px 8px;
@@ -140,48 +159,62 @@
 <div class="container">
     <div class="nav-tabs">
         <a href="#papers">学术论文</a>
-        <a href="#patents">授权及申请专利</a>
+        <a href="#patents">发明专利及软件著作权</a>
     </div>
 
-    <h2 id="papers">一、 发表的主要相关论文</h2>
+    <h2 id="papers">一、 申请人近几年发表的主要相关论文</h2>
     <div class="publication-list">
         <div class="pub-item"><span class="index-num">[1]</span> <span class="highlight-author">Han B*</span>, Yan Q Y, Ren Y Y, et al. Interfacial resistance-based multifunctional health monitoring on ultrasonic welding of carbon fiber-reinforced thermoplastic composites[J]. Mechanical Systems and Signal Processing, 2025, 238: 113247. </div>
-        <div class="pub-item"><span class="index-num">[2]</span> Ren Y Y, <span class="highlight-author">Han B*</span>, Yan Q Y, et al. High-performance ultrasonic welding of continuous carbon fiber reinforced polycarbonate composites: Synergizing simulation and experimentation[J]. Composite Structures, 2025, 372: 119555. </div>
-        <div class="pub-item"><span class="index-num">[3]</span> Ren Y Y, <span class="highlight-author">Han B*</span>, Yan Q Y, et al. Enhancement of pre-embedding SiC particle on interfacial strength in ultrasonic welded carbon fiber reinforced thermoplastic composite joints. Composites Science and Technology, 2025, 267: 111200. </div>
-        <div class="pub-item"><span class="index-num">[4]</span> Han B, Hui W W, Zhang Q C, et al. A refined quasi-3D zigzag beam theory for free vibration and stability analysis of multilayered composite beams subjected to thermomechanical loading[J]. Composite Structures, 2018, 204: 620-633.</div>
-        <div class="pub-item"><span class="index-num">[5]</span> <span class="highlight-author">Han B*</span>, Qin K K, Zhang Q C, et al. Free vibration and buckling of foam-filled composite corrugated sandwich plates under thermal loading[J]. Composite Structures, 2017, 172: 173-189.</div>
-        <div class="pub-item"><span class="index-num">[6]</span> Han B, Zhang Z J, Zhang Q C, et al. Recent advances in hybrid lattice-cored sandwiches for enhanced multifunctional performance[J]. Extreme Mechanics Letters, 2017, 10: 58-69.</div>
-        <div class="pub-item"><span class="index-num">[7]</span> Quan C, <span class="highlight-author">Han B*</span>, Hou Z H, et al. 3D printed continuous fiber reinforced composite auxetic honeycomb structure[J]. Composites Part B, 2020, 187: 107858.</div>
-        <div class="pub-item"><span class="index-num">[8]</span> Zhao Z Y, <span class="highlight-author">Han B*</span>, Wang X, et al. Out-of-plane compression of Ti-6Al-4V sandwich panels with corrugated channel cores[J]. Materials & Design, 2018, 137: 463-472.</div>
-        <div class="pub-item"><span class="index-num">[9]</span> Zhang R, <span class="highlight-author">Han B*</span>, Lu T J*. Confinement effects on compressive and ballistic performance of ceramics: A review[J]. International Materials Reviews, 2021, 66(5): 287-312.</div>
+        <div class="pub-item"><span class="index-num">[2]</span> Ren Y Y, <span class="highlight-author">Han B*</span>, Yan Q Y, et al. High-performance ultrasonic welding of continuous carbon fiber reinforced polycarbonate composites: Synergizing simulation and experimentation[J]. Composite Structures, 2025, 372: 119555.</div>
+        <div class="pub-item"><span class="index-num">[3]</span> Ren Y Y, <span class="highlight-author">Han B*</span>, Yan Q Y, et al. Enhancement of pre-embedding SiC particle on interfacial strength in ultrasonic welded carbon fiber reinforced thermoplastic composite joints. Composites Science and Technology, 2025, 267: 111200.</div>
+        <div class="pub-item"><span class="index-num">[4]</span> Wang H, <span class="highlight-author">Han B*</span>, Zheng PY, Liu ZP, Zhang Q. Recent advances of defect-driven hybrid additive manufacturing of extrusion-based polymers: bridging multiscale mechanisms to enhanced structural performance. Advanced Composites and Hybrid Materials, 2026, 9:46.</div>
+        <div class="pub-item"><span class="index-num">[5]</span> <span class="highlight-author">Han B*</span>, Liu C, Zheng PY, Wang YN, Zhu JL, Ye HX, Zhang Q. Integrated self-sensing damage detection and mechanical enhancement in composite tetra-chiral metamaterials. International Journal of Mechanical Science, 2026, 314:111390.</div>
+        <div class="pub-item"><span class="index-num">[6]</span> Zheng PY, <span class="highlight-author">Han B*</span>, Liu ZP, Zhang KC, Wang QZ, Zhang Q. Transformable mechanical metastructures with multi-dimensional programmability via spatiotemporal electrothermal stress relaxation. International Journal of Extreme Manufacturing, 2026, in press.</div>
+        <div class="pub-item"><span class="index-num">[7]</span> Zheng PY, <span class="highlight-author">Han B*</span>, Yao WB, Lu Y, Liu ZP, Wang QZ, Wang H, Zhang Q. Controllable spatiotemporal programming of shape memory polymer-elastomer bilayer composites for dynamic soft actuators. Chemical Engineering Journal, 2025, 518:164617.</div>
+        <div class="pub-item"><span class="index-num">[8]</span> <span class="highlight-author">Han B*</span>, Wang YN, Liu C, Liu ZP, Zhang Q. 3D printed continuous carbon fiber reinforced TPU metamaterials for flexible multifunctional sensors. Chemical Engineering Journal, 2025, 513: 162767.</div>
+        <div class="pub-item"><span class="index-num">[9]</span> Zheng P, <span class="highlight-author">Han B*</span>, Liu Z P, et al. Multistable twist metastructures with enhanced collapsibility and multidimensional programmability[J]. Additive Manufacturing, 2024, 95: 104550.</div>
         <div class="pub-item"><span class="index-num">[10]</span> Yue Z S, <span class="highlight-author">Han B*</span>, Wang Z Y, et al. Data-driven multi-objective optimization of ultralight hierarchical origami-corrugation meta-sandwich structures[J]. Composite Structures, 2023, 303: 116334.</div>
         <div class="pub-item"><span class="index-num">[11]</span> Zhang R, <span class="highlight-author">Han B*</span>, Zhou Y, et al. Ballistic performance of ultralight multifunctional cellular sandwich plates with UHMWPE fiber metal laminate skins[J]. Composite Structures, 2023, 304: 116390.</div>
         <div class="pub-item"><span class="index-num">[12]</span> Zhang R, <span class="highlight-author">Han B*</span>, Zhou Y, et al. Mechanism-driven analytical modelling of UHMWPE laminates under ballistic impact[J]. International Journal of Mechanical Science, 2023, 245: 108132.</div>
-        <div class="pub-item"><span class="index-num">[13]</span> Zhang R, <span class="highlight-author">Han B*</span>, Zhong J Y, et al. Enhanced ballistic resistance of multilayered cross-ply UHMWPE laminated plates[J]. International Journal of Impact Engineering, 2022, 159: 104035.</div>
-        <div class="pub-item"><span class="index-num">[14]</span> Zhang R, <span class="highlight-author">Han B*</span>, Li L, et al. Influence of prestress on ballistic performance of bi-layer ceramic composite armors: Experiments and simulations[J]. Composite Structures, 2019, 227: 111258.</div>
-        <div class="pub-item"><span class="index-num">[15]</span> Zhao Z N, <span class="highlight-author">Han B*</span>, Zhang R, et al. Enhancement of UHMWPE encapsulation on the ballistic performance of bi-layer mosaic armors[J]. Composites Part B, 2021, 221: 109023.</div>
-        <div class="pub-item"><span class="index-num">[16]</span> Yang M, <span class="highlight-author">Han B*</span>, Su P B, et al. Crashworthiness of hierarchical truncated conical shells with corrugated cores[J]. International Journal of Mechanical Sciences, 2021, 193: 106171.</div>
-        <div class="pub-item"><span class="index-num">[17]</span> Zheng P, <span class="highlight-author">Han B*</span>, Liu Z P, et al. Multistable twist metastructures with enhanced collapsibility and multidimensional programmability[J]. Additive Manufacturing, 2024, 95: 104550. </div>
-        <div class="pub-item"><span class="index-num">[18]</span> Niu L, Zhang Q*, Wang B, Han B, Li H, Mei T J. A modified Hansel-Spittel constitutive equation of Ti-6Al-4V during cogging process[J]. Journal of Alloys and Compounds, 2022, 894: 162387.</div>
-        <div class="pub-item"><span class="index-num">[19]</span> Han W, Fu L*, Chen H Y. Effect of welding speed on fatigue properties of TC18 thick plate by electron beam welding[J], Rare Metal Materials and Engineering, 2018, 47(8): 2335-2340.</div>
-        <div class="pub-item"><span class="index-num">[20]</span> Han W, Fu L*, Chen H Y. Effect of strain rate on microstructure and mechanical properties of TC18 thick plate by electron beam welding[J], Rare Metal Materials and Engineering, 2018, 47(7): 2005-2010.</div>
-        <div class="pub-item"><span class="index-num">[21]</span> 韩宾, 王宏, 于杨惠文, 等. 碳纤维增强热塑性复合材料盒形件热冲压成型研究[J]. 航空制造技术, 2017, 535(16): 40-45.</div>
-        <div class="pub-item"><span class="index-num">[22]</span> 韩文, 傅莉*, 陈海燕. 坡口形式对TC18钛合金厚板焊接接头组织及性能的影响[J]. 热加工工艺, 2018, 47(11): 51-54.</div>
-        <div class="pub-item"><span class="index-num">[23]</span> 韩文, 傅莉*, 陈海燕. 沿板厚方向TC18钛合金厚板电子束焊接接头组织及疲劳性能研究[J]. 热加工工艺, 2018, 47(7): 45-48.</div>
-        <div class="pub-item"><span class="index-num">[24]</span> <span class="highlight-author">韩文*</span>. 焊接速度对TC18电子束焊接接头拉伸性能的影响试验研究[J]. 航空科学技术, 2017, 28(06): 70-73.</div>
+        <div class="pub-item"><span class="index-num">[13]</span> Niu L, Zhang Q*, Wang B, Han B, Li H, Mei T J. A modified Hansel-Spittel constitutive equation of Ti-6Al-4V during cogging process[J]. Journal of Alloys and Compounds, 2022, 894: 162387.</div>
+        <div class="pub-item"><span class="index-num">[14]</span> Zhang R, <span class="highlight-author">Han B*</span>, Zhong J Y, et al. Enhanced ballistic resistance of multilayered cross-ply UHMWPE laminated plates[J]. International Journal of Impact Engineering, 2022, 159: 104035.</div>
+        <div class="pub-item"><span class="index-num">[15]</span> Zhang R, <span class="highlight-author">Han B*</span>, Li L, et al. Influence of prestress on ballistic performance of bi-layer ceramic composite armors: Experiments and simulations[J]. Composite Structures, 2019, 227: 111258.</div>
+        <div class="pub-item"><span class="index-num">[16]</span> Zhao Z N, <span class="highlight-author">Han B*</span>, Zhang R, et al. Enhancement of UHMWPE encapsulation on the ballistic performance of bi-layer mosaic armors[J]. Composites Part B, 2021, 221: 109023.</div>
+        <div class="pub-item"><span class="index-num">[17]</span> Yang M, <span class="highlight-author">Han B*</span>, Su P B, et al. Crashworthiness of hierarchical truncated conical shells with corrugated cores[J]. International Journal of Mechanical Sciences, 2021, 193: 106171.</div>
+        <div class="pub-item"><span class="index-num">[18]</span> Quan C, <span class="highlight-author">Han B*</span>, Hou Z H, et al. 3D printed continuous fiber reinforced composite auxetic honeycomb structure[J]. Composites Part B, 2020, 187: 107858.</div>
+        <div class="pub-item"><span class="index-num">[19]</span> Zhao Z Y, <span class="highlight-author">Han B*</span>, Wang X, et al. Out-of-plane compression of Ti-6Al-4V sandwich panels with corrugated channel cores[J]. Materials & Design, 2018, 137: 463-472.</div>
+        <div class="pub-item"><span class="index-num">[20]</span> <span class="highlight-author">Han B*</span>, Hui W W, Zhang Q C, et al. A refined quasi-3D zigzag beam theory for free vibration and stability analysis of multilayered composite beams subjected to thermomechanical loading[J]. Composite Structures, 2018, 204: 620-633.</div>
+        <div class="pub-item"><span class="index-num">[21]</span> <span class="highlight-author">Han B*</span>, Qin K K, Zhang Q C, et al. Free vibration and buckling of foam-filled composite corrugated sandwich plates under thermal loading[J]. Composite Structures, 2017, 172: 173-189.</div>
+        <div class="pub-item"><span class="index-num">[22]</span> Han B, Zhang Z J, Zhang Q C, et al. Recent advances in hybrid lattice-cored sandwiches for enhanced multifunctional performance[J]. Extreme Mechanics Letters, 2017, 10: 58-69.</div>
+        <div class="pub-item"><span class="index-num">[23]</span> Han W, Fu L*, Chen H Y. Effect of welding speed on fatigue properties of TC18 thick plate by electron beam welding[J], Rare Metal Materials and Engineering, 2018, 47(8): 2335-2340.</div>
+        <div class="pub-item"><span class="index-num">[24]</span> Han W, Fu L*, Chen H Y. Effect of strain rate on microstructure and mechanical properties of TC18 thick plate by electron beam welding[J], Rare Metal Materials and Engineering, 2018, 47(7): 2005-2010.</div>
+        <div class="pub-item"><span class="index-num">[25]</span> 韩宾, 王宏, 于杨惠文, 等. 碳纤维增强热塑性复合材料盒形件热冲压成型研究[J]. 航空制造技术, 2017, 535(16): 40-45.</div>
+        <div class="pub-item"><span class="index-num">[26]</span> 韩文, 傅莉*, 陈海燕. 坡口形式对TC18钛合金厚板焊接接头组织及性能的影响[J]. 热加工工艺, 2018, 47(11): 51-54.</div>
+        <div class="pub-item"><span class="index-num">[27]</span> 韩文, 傅莉*, 陈海燕. 沿板厚方向TC18钛合金厚板电子束焊接接头组织及疲劳性能研究[J]. 热加工工艺, 2018, 47(7): 45-48.</div>
+        <div class="pub-item"><span class="index-num">[28]</span> <span class="highlight-author">韩文*</span>. 焊接速度对TC18电子束焊接接头拉伸性能的影响试验研究[J]. 航空科学技术, 2017, 28(06): 70-73.</div>
     </div>
 
-    <h2 id="patents">二、 发明专利成果</h2>
+    <h2 id="patents">二、 发明专利及软件著作权成果</h2>
     <div class="publication-list">
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[1]</span> 韩宾, 王肖笛, 严启源, 等. 连续纤维增强热塑性复合材料与金属的超声波复合铆焊方法[P]. 2023. 申请号: CN202310094688.3.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[2]</span> 韩宾, 严启源, 王肖笛, 等. 连续碳纤维增强热塑性复合材料超声波焊接界面监测方法[P]. 2023. 申请号: CN202310075012.X.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[3]</span> 韩宾, 严启源, 王肖笛, 等. 连续碳纤维增强热塑性复合材料超声波焊接质量检测方法[P]. 2023. 申请号: CN202310078018.2.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[4]</span> 韩宾, 严启源, 王肖笛, 等. 连续碳纤维增强热塑性复合材料焊接接头温度监测方法[P]. 2023. 申请号: CN202310078399.4.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[5]</span> 韩宾, 任禹尧, 严启源, 等. 纤维增强热塑性复合材料超声波连续焊接智能系统及方法[P]. 2025. 申请号: CN202510036139X.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[6]</span> 韩宾, 王浩, 郑培远, 等. 一种复杂超结构的多类别强非线性曲线预测方法及系统[P]. 2024. 申请号: CN2024119034963.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[7]</span> 韩宾, 李芸瑜, 李战鑫, 等. 一种连续纤维增强复合材料拉胀结构及其制备方法[P]. 2020. 申请号: CN202010948362.9.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[8]</span> 韩宾, 张瑞, 李朗, 等. 一种复合防弹装甲板及其制备方法[P]. 2019. 申请号: CN201910009265.0.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[9]</span> 韩宾, 王泽雨, 李芸瑜, 等. 一种多稳态压扭复合吸能结构[P]. 2021. 申请号: CN202110914595.1.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[1]</span> 韩宾, 张瑞, 李朗, 等. 一种复合防弹装甲板及其制备方法[P]. 2019. 专利号: CN201910009265.0.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[2]</span> 韩宾, 李芸瑜, 李战鑫, 等. 一种连续纤维增强复合材料拉胀结构及其制备方法[P]. 2020. 专利号: CN202010948362.9.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[3]</span> 韩宾, 王泽雨, 李芸瑜, 等. 一种多稳态压扭复合吸能结构[P]. 2021. 专利号: CN202110914595.1.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[4]</span> 韩宾, 王肖笛, 严启源, 等. 连续纤维增强热塑性复合材料与金属的超声波复合铆焊方法[P]. 2023. 专利号: CN202310094688.3.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[5]</span> 韩宾, 严启源, 王肖笛, 等. 连续碳纤维增强热塑性复合材料超声波焊接界面监测方法[P]. 2023. 专利号: CN202310075012.X.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[6]</span> 韩宾, 严启源, 王肖笛, 等. 连续碳纤维增强热塑性复合材料超声波焊接质量检测方法[P]. 2023. 专利号: CN202310078018.2.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[7]</span> 韩宾, 严启源, 王肖笛, 等. 连续碳纤维增强热塑性复合材料焊接接头温度监测方法[P]. 2023. 专利号: CN202310078399.4.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[8]</span> 韩宾, 朱家乐, 王一诺, 罗昊, 张琦, 胡鼎松. 基于连续纤维复合材料的柔性传感器及其制备方法和应用[P]. 2023. 专利号: ZL202310075079.3</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[9]</span> 韩宾, 王浩, 郑培远, 等. 一种复杂超结构的多类别强非线性曲线预测方法及系统[P]. 2024. 专利号: CN2024119034963.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[10]</span> 韩宾, 任禹尧, 严启源, 等. 纤维增强热塑性复合材料超声波连续焊接智能系统及方法[P]. 2025. 申请号: CN202510036139X.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[11]</span> 韩宾, 王一诺, 刘畅, 郑培远. 基于曲面共形打印的纤维复合材料振动传感器及其方法[P]. 2025. 申请号: CN2025108723806.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[12]</span> 韩宾, 郑培远, 张开昌, 王钦泽, 张琦, 刘志鹏. 电热力耦合的纤维复合材料超结构性能调控方法及系统[P]. 2025. 申请号: 2025117548168. </div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[13]</span> 韩宾, 郑培远, 姚文博, 张开昌, 张琦. 基于应力松弛的智能复合材料结构变形时空调控方法及系统[P]. 2025. 申请号: 2025117548204.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[14]</span> 韩宾, 王钦泽, 薛金龙, 郑培远, 张琦, 陈朴. 一种结构式/颗粒式增强相混杂高性能环氧树脂基复合材料及其制备方法[P]. 2026. 申请号: 2025120549414.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[15]</span> 韩宾, 鄢忠啟, 罗昊, 张琦. 弱刚度芯模复合材料壳体全流程仿真及爆破压强预测方法[P]. 2026. 申请号: 2026100163302.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[16]</span> 韩宾, 叶泓希, 刘畅, 郑培远, 张琦, 代昕冉. 基于点连接展开与一笔画路径规划的碳纤维3D打印方法[P]. 2026. 申请号: 2026101192124.</div>
+        <div class="pub-item"><span class="software-tag">软件著作权</span> <span class="index-num">[17]</span> 朱家乐, 韩宾, 张琦. 连续纤维3D打印单行程路径规划软件V1.0. 2023. 登记号: 2023SR0361458.</div>
+        <div class="pub-item"><span class="software-tag">软件著作权</span> <span class="index-num">[18]</span> 韩宾, 鄢忠啟, 罗昊, 张琦. 纤维增强复材管道内壁缺陷修复装备控制系统. 2025. 登记号: 2025R11L1599242. </div>
+        <div class="pub-item"><span class="software-tag">软件著作权</span> <span class="index-num">[19]</span> 韩宾, 王一诺, 刘畅, 张琦. 面向连续纤维增材制造的轮廓提取软件[简称：图片轮廊生成程序]V1.0. 2025. 登记号: 2025SR1238344.</div>
     </div>
 </div>
 
