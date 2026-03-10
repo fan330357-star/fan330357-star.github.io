@@ -7,8 +7,8 @@
     <style>
         :root {
             --primary-color: #003366; 
-            --accent-latest: #e74c3c; /* 2026最新成果红色 */
-            --accent-new: #f39c12;    /* 2025新成果橙色 */
+            --accent-latest: #e74c3c; 
+            --accent-new: #f39c12;    
             --bg-color: #f8f9fa;
         }
 
@@ -38,10 +38,12 @@
             box-shadow: 0 5px 25px rgba(0,0,0,0.05);
         }
 
+        /* 导航栏 */
         .nav-tabs {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
             margin-bottom: 30px;
             position: sticky;
             top: 0;
@@ -102,8 +104,7 @@
             text-decoration: underline;
         }
 
-        .badge-latest {
-            background-color: var(--accent-latest);
+        .badge-latest, .badge-new {
             color: white;
             font-size: 11px;
             padding: 2px 6px;
@@ -113,39 +114,60 @@
             text-transform: uppercase;
             font-weight: bold;
         }
+        .badge-latest { background-color: var(--accent-latest); }
+        .badge-new { background-color: var(--accent-new); }
 
-        .badge-new {
-            background-color: var(--accent-new);
-            color: white;
-            font-size: 11px;
-            padding: 2px 6px;
-            border-radius: 4px;
-            vertical-align: middle;
-            margin-left: 8px;
-            text-transform: uppercase;
+        .patent-tag { background-color: #27ae60; color: white; font-size: 12px; padding: 2px 8px; border-radius: 4px; margin-right: 8px; }
+        .software-tag { background-color: #2980b9; color: white; font-size: 12px; padding: 2px 8px; border-radius: 4px; margin-right: 8px; }
+
+        /* 表格样式 */
+        .intro-text {
+            text-indent: 2em;
+            color: #444;
+            margin-bottom: 15px;
         }
 
-        .patent-tag {
-            background-color: #27ae60;
-            color: white;
-            font-size: 12px;
-            padding: 2px 8px;
-            border-radius: 4px;
-            margin-right: 8px;
+        .table-caption {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
         }
-        
-        .software-tag {
-            background-color: #2980b9;
-            color: white;
-            font-size: 12px;
-            padding: 2px 8px;
-            border-radius: 4px;
-            margin-right: 8px;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #edf2f7;
+            padding: 12px 15px;
+            text-align: center;
+        }
+
+        td:nth-child(3) {
+            text-align: left; /* 课题名称左对齐更易读 */
+        }
+
+        th {
+            background-color: #f1f7ff;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: #f8fbff;
         }
 
         @media (max-width: 768px) {
             .container { margin: 10px; padding: 20px; }
             .nav-tabs { font-size: 14px; }
+            th, td { padding: 8px 10px; font-size: 14px; }
         }
     </style>
 </head>
@@ -159,7 +181,8 @@
 <div class="container">
     <div class="nav-tabs">
         <a href="#papers">学术论文</a>
-        <a href="#patents">发明专利及软件著作权</a>
+        <a href="#patents">发明专利及软著</a>
+        <a href="#students">指导研究生情况</a>
     </div>
 
     <h2 id="papers">一、 申请人近几年发表的主要相关论文</h2>
@@ -196,26 +219,67 @@
 
     <h2 id="patents">二、 发明专利及软件著作权成果</h2>
     <div class="publication-list">
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[1]</span> 韩宾, 张瑞, 李朗, 等. 一种复合防弹装甲板及其制备方法[P]. 2019. 专利号: CN201910009265.0.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[2]</span> 韩宾, 李芸瑜, 李战鑫, 等. 一种连续纤维增强复合材料拉胀结构及其制备方法[P]. 2020. 专利号: CN202010948362.9.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[3]</span> 韩宾, 王泽雨, 李芸瑜, 等. 一种多稳态压扭复合吸能结构[P]. 2021. 专利号: CN202110914595.1.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[4]</span> 韩宾, 王肖笛, 严启源, 等. 连续纤维增强热塑性复合材料与金属的超声波复合铆焊方法[P]. 2023. 专利号: CN202310094688.3.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[5]</span> 韩宾, 严启源, 王肖笛, 等. 连续碳纤维增强热塑性复合材料超声波焊接界面监测方法[P]. 2023. 专利号: CN202310075012.X.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[6]</span> 韩宾, 严启源, 王肖笛, 等. 连续碳纤维增强热塑性复合材料超声波焊接质量检测方法[P]. 2023. 专利号: CN202310078018.2.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[7]</span> 韩宾, 严启源, 王肖笛, 等. 连续碳纤维增强热塑性复合材料焊接接头温度监测方法[P]. 2023. 专利号: CN202310078399.4.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[8]</span> 韩宾, 朱家乐, 王一诺, 罗昊, 张琦, 胡鼎松. 基于连续纤维复合材料的柔性传感器及其制备方法和应用[P]. 2023. 专利号: ZL202310075079.3</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[9]</span> 韩宾, 王浩, 郑培远, 等. 一种复杂超结构的多类别强非线性曲线预测方法及系统[P]. 2024. 专利号: CN2024119034963.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[10]</span> 韩宾, 任禹尧, 严启源, 等. 纤维增强热塑性复合材料超声波连续焊接智能系统及方法[P]. 2025. 申请号: CN202510036139X.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[11]</span> 韩宾, 王一诺, 刘畅, 郑培远. 基于曲面共形打印的纤维复合材料振动传感器及其方法[P]. 2025. 申请号: CN2025108723806.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[12]</span> 韩宾, 郑培远, 张开昌, 王钦泽, 张琦, 刘志鹏. 电热力耦合的纤维复合材料超结构性能调控方法及系统[P]. 2025. 申请号: 2025117548168. </div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[13]</span> 韩宾, 郑培远, 姚文博, 张开昌, 张琦. 基于应力松弛的智能复合材料结构变形时空调控方法及系统[P]. 2025. 申请号: 2025117548204.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[14]</span> 韩宾, 王钦泽, 薛金龙, 郑培远, 张琦, 陈朴. 一种结构式/颗粒式增强相混杂高性能环氧树脂基复合材料及其制备方法[P]. 2026. 申请号: 2025120549414.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[15]</span> 韩宾, 鄢忠啟, 罗昊, 张琦. 弱刚度芯模复合材料壳体全流程仿真及爆破压强预测方法[P]. 2026. 申请号: 2026100163302.</div>
-        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[16]</span> 韩宾, 叶泓希, 刘畅, 郑培远, 张琦, 代昕冉. 基于点连接展开与一笔画路径规划的碳纤维3D打印方法[P]. 2026. 申请号: 2026101192124.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[1]</span> 韩宾, 王肖笛, 严启源, 等. 连续纤维增强热塑性复合材料与金属的超声波复合铆焊方法[P]. 2023. 专利号: ZL202310094688.3.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[2]</span> 韩宾, 严启源, 王肖笛, 等. 连续碳纤维增强热塑性复合材料超声波焊接界面监测方法[P]. 2023. 专利号: ZL202310075012.X.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[3]</span> 韩宾, 严启源, 王肖笛, 等. 连续碳纤维增强热塑性复合材料超声波焊接质量检测方法[P]. 2023. 专利号: ZL202310078018.2.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[4]</span> 韩宾, 严启源, 王肖笛, 等. 连续碳纤维增强热塑性复合材料焊接接头温度监测方法[P]. 2023. 专利号: ZL202310078399.4.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[5]</span> 韩宾, 任禹尧, 严启源, 等. 纤维增强热塑性复合材料超声波连续焊接智能系统及方法[P]. 2025. 申请号: CN202510036139X.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[6]</span> 韩宾, 李芸瑜, 李战鑫, 等. 一种连续纤维增强复合材料拉胀结构及其制备方法[P]. 2020. 专利号: ZL202010948362.9.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[7]</span> 韩宾, 朱家乐, 王一诺, 罗昊, 张琦, 胡鼎松. 基于连续纤维复合材料的柔性传感器及其制备方法和应用[P]. 2023. 专利号: ZL202310075079.3</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[8]</span> 韩宾, 王浩, 郑培远, 等. 一种复杂超结构的多类别强非线性曲线预测方法及系统[P]. 2024. 专利号: ZL2024119034963.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[9]</span> 韩宾, 王一诺, 刘畅, 郑培远. 基于曲面共形打印的纤维复合材料振动传感器及其方法[P]. 2025. 申请号: CN2025108723806.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[10]</span> 韩宾, 郑培远, 张开昌, 王钦泽, 张琦, 刘志鹏. 电热力耦合的纤维复合材料超结构性能调控方法及系统[P]. 2025. 申请号: 2025117548168. </div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[11]</span> 韩宾, 郑培远, 姚文博, 张开昌, 张琦. 基于应力松弛的智能复合材料结构变形时空调控方法及系统[P]. 2025. 申请号: 2025117548204.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[12]</span> 韩宾, 王钦泽, 薛金龙, 郑培远, 张琦, 陈朴. 一种结构式/颗粒式增强相混杂高性能环氧树脂基复合材料及其制备方法[P]. 2026. 申请号: 2025120549414.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[13]</span> 韩宾, 鄢忠啟, 罗昊, 张琦. 弱刚度芯模复合材料壳体全流程仿真及爆破压强预测方法[P]. 2026. 申请号: 2026100163302.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[14]</span> 韩宾, 叶泓希, 刘畅, 郑培远, 张琦, 代昕冉. 基于点连接展开与一笔画路径规划的碳纤维3D打印方法[P]. 2026. 申请号: 2026101192124.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[15]</span> 韩宾, 张瑞, 李朗, 等. 一种复合防弹装甲板及其制备方法[P]. 2019. 专利号: ZL201910009265.0.</div>
+        <div class="pub-item"><span class="patent-tag">发明专利</span> <span class="index-num">[16]</span> 韩宾, 王泽雨, 李芸瑜, 等. 一种多稳态压扭复合吸能结构[P]. 2021. 专利号: ZL202110914595.1.</div>琦. 连续纤维3D打印单行程路径规划软件V1.0. 2023. 登记号: 2023SR0361458.</div>
         <div class="pub-item"><span class="software-tag">软件著作权</span> <span class="index-num">[17]</span> 朱家乐, 韩宾, 张琦. 连续纤维3D打印单行程路径规划软件V1.0. 2023. 登记号: 2023SR0361458.</div>
         <div class="pub-item"><span class="software-tag">软件著作权</span> <span class="index-num">[18]</span> 韩宾, 鄢忠啟, 罗昊, 张琦. 纤维增强复材管道内壁缺陷修复装备控制系统. 2025. 登记号: 2025R11L1599242. </div>
         <div class="pub-item"><span class="software-tag">软件著作权</span> <span class="index-num">[19]</span> 韩宾, 王一诺, 刘畅, 张琦. 面向连续纤维增材制造的轮廓提取软件[简称：图片轮廊生成程序]V1.0. 2025. 登记号: 2025SR1238344.</div>
     </div>
+
+    <h2 id="students">三、 围绕申请书课题背景指导研究生情况</h2>
+    <p class="intro-text">目前针对碳纤维增强热塑性复合材料的成形制造、超声连接及电阻传感监测等技术研究方面，已培养 5 名硕士研究生（见表 1）。</p>
+    <div class="table-caption">表 1 复合材料成形制造及连接工艺相关方向的研究生毕业情况</div>
+    <table>
+        <thead>
+            <tr>
+                <th width="15%">学生姓名</th>
+                <th width="15%">毕业年份</th>
+                <th>毕业课题名称</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>王肖笛</td>
+                <td>2023.06</td>
+                <td>碳纤维增强热塑性复合材料超声波焊接工艺及质量监测研究</td>
+            </tr>
+            <tr>
+                <td>朱佳乐</td>
+                <td>2023.06</td>
+                <td>3D 打印连续碳纤复材基超材料力学及传感特性研究</td>
+            </tr>
+            <tr>
+                <td>段文杰</td>
+                <td>2022.06</td>
+                <td>编织碳纤维增强热塑性复合材料的超声波焊接工艺及界面增强性能研究</td>
+            </tr>
+            <tr>
+                <td>王宏</td>
+                <td>2020.06</td>
+                <td>碳纤维增强 PC/ABS 树脂基复合材料板热拉深成形工艺研究</td>
+            </tr>
+            <tr>
+                <td>于杨惠文</td>
+                <td>2020.06</td>
+                <td>碳纤维增强复合材料板汽车发动机罩热冲压成形工艺研究</td>
+            </tr>
+        </tbody>
+    </table>
+
 </div>
 
 </body>
